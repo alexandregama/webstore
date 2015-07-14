@@ -22,10 +22,11 @@ public class Product {
 
 	private boolean discontinued;
 
-	public Product(Long id, String name, BigDecimal unitPrice) {
+	public Product(Long id, String name, BigDecimal unitPrice, String description) {
 		this.id = id;
 		this.name = name;
 		this.unitPrice = unitPrice;
+		this.description = description;
 	}
 
 	@Override
