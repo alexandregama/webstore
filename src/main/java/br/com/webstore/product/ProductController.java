@@ -1,7 +1,6 @@
 package br.com.webstore.product;
 
-import java.math.BigDecimal;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,11 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ProductController {
 
+	@Autowired
+	private Products products;
+	
 	@RequestMapping("/products")
 	public String list(Model model) {
-		Product iPhone = new Product(1L, "iPhone", new BigDecimal(2500));
-		
-		model.addAttribute("product", iPhone);
+		model.addAttribute("products", products.getAll());
 		
 		return "products";
 	}
