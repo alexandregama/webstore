@@ -17,5 +17,10 @@
 			</div>
 		</div>
 	</section>
+	
+	<section class="container">
+		<a href="products">Products</a><br/>
+		<a href="customers">Customers</a>
+	</section>
 </body>
 </html>
