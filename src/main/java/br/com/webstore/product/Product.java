@@ -70,4 +70,8 @@ public class Product {
 		return discontinued;
 	}
 
+	public void removeFromStock(int quantity) {
+		this.unitsInStock -= quantity;
+	}
+
 }
