@@ -22,11 +22,12 @@ public class Product {
 
 	private boolean discontinued;
 
-	public Product(Long id, String name, BigDecimal unitPrice, String description) {
+	public Product(Long id, String name, BigDecimal unitPrice, String description, Long unitsInStock) {
 		this.id = id;
 		this.name = name;
 		this.unitPrice = unitPrice;
 		this.description = description;
+		this.unitsInStock = unitsInStock;
 	}
 
 	@Override
@@ -70,7 +71,7 @@ public class Product {
 		return discontinued;
 	}
 
-	public void removeFromStock(int quantity) {
+	public void removeFromStock(Long quantity) {
 		this.unitsInStock -= quantity;
 	}
 

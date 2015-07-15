@@ -8,6 +8,7 @@ public class ProductBuilder {
 	private String name;
 	private BigDecimal unitPrice;
 	private String description;
+	private Long unitsInStock;
 	
 	public ProductBuilder withId(Long id) {
 		this.id = id;
@@ -28,9 +29,14 @@ public class ProductBuilder {
 		this.description = description;
 		return this;
 	}
+	
+	public ProductBuilder witQuantity(Long quantity) {
+		this.unitsInStock = quantity;
+		return this;
+	}
 
 	public Product build() {
-		return new Product(id, name, unitPrice, description);
+		return new Product(id, name, unitPrice, description, unitsInStock);
 	}
 
 }

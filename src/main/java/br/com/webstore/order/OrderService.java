@@ -1,4 +1,4 @@
-package br.com.webstore.service;
+package br.com.webstore.order;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ public class OrderService {
 	@Autowired
 	private Products products;
 	
-	public void proccessOrder(Long id, int quantity) {
+	public void processOrder(Long id, Long quantity) {
 		Product product = products.findById(id);
 		
 		if (product.getUnitsInStock() < quantity) {
