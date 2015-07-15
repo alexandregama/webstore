@@ -25,4 +25,16 @@ public class InMemoryProductDao implements Products {
 		return products;
 	}
 
+	@Override
+	public Product findById(Long id) {
+		Product productFound = null;
+		for (Product product: products) {
+			if (product != null && product.getId().equals(id)) {
+				productFound = product;
+				break;
+			}
+		}
+		return productFound;
+	}
+
 }
