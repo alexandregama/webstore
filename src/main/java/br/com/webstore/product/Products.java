@@ -6,4 +6,6 @@ public interface Products {
 
 	List<Product> getAll();
 	
+	Product findById(Long id);
+	
 }
